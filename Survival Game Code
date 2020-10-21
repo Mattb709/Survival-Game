@@ -1,4 +1,4 @@
-# To do: Add reload game button, Expand option trees and story quality, show health bar
+# To do: Add reload game button, Expand option trees & make story less terrible, show health bar
 
 print ("Welcome to my first game")
 name = input("What is your name? ")
