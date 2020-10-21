@@ -1,0 +1,65 @@
+# To do: Add reload game button, Expand option trees and story quality, show health bar
+
+print ("Welcome to my first game")
+name = input("What is your name? ")
+age = int(input("What is your age? "))
+
+print ("Hello", name, "Your are", age, "years old")
+
+health = 10
+if age >= 13:
+    print ("You are old enough to play the game!")
+    wants_to_play = input("Do you want to play? [Y/N] ").upper()
+    if wants_to_play == 'Y':
+        print("Lets play!")
+        print("You are starting with", health, "health")
+        
+        left_or_right = input("First choice... (1) Left or (2) Right [1/2]? ")
+        if left_or_right == "1":
+            ans = input("Nice, you follow the path and reach a lake... Do you (1) swim across (2) go around [1/2]? ")
+            
+            if ans == "2":
+                print("You walk around the lake and reach the other side, but you are tired and have lost 2 health")
+                health -= 2
+            
+            elif ans == "1":
+                print("You swim across the lake, but the water was freezing cold and you lost 5 health")
+                health -= 5
+                
+            
+                
+            ans = input("In one direction you see a house, in the other, a mountain. Which do you go to (1) house (2) mountain [1/2]? ")
+            if ans == "1":
+                print ("You go to the house and are greeted by the owner... he chases you with an axe and you lose 5 health")
+                health -= 5
+                if health <= 0:
+                    print ("You are out of health. You lose.")
+                else:
+                    ans = input("You see a boat by the river, but it leads to a stormy sea... do you (1) set sail or (2) stay here? ")
+                    if ans == "1":
+                        print("You set sail, battered by weather, you make it to an island... but the trip has cost you 1 health")
+                        health -= 1
+                        if health <= 0:
+                            print ("You are out of health. You lose.")
+                        else:
+                            ans = input("Right now you are on the beach, do you (1) stay with the boat or (2) explore the island [1/2]? ")
+                            if ans == "1":
+                                print("You stay with the boat to rest, a large wave carries you out to sea and you die.")
+                            elif ans == "2":
+                             print("You head into the forest of the island, this is the end of the game for now so you win. yayyy")
+                             #add ans
+                            
+                    elif ans == "2":
+                     print("The homeowner catches up to you and eats you for supper... you lost")
+               
+                    
+                       
+                                    
+                            
+                    
+                        
+            else:
+                print("You fell while climbing the mountain and lost...")
+                
+        else:
+            print("you fell down and died")
